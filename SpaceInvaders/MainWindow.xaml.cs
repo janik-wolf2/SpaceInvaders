@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using SpaceInvaders.strony;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,15 @@ namespace SpaceInvaders
         public MainWindow()
         {
             InitializeComponent();
+            glownyFrame.Navigate(new menuGlowne());
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (glownyFrame.Content is planszaGry gamePage)
+            {
+                gamePage.HandleKeyPress(e);
+            }
         }
     }
 }

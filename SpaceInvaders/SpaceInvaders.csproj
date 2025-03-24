@@ -8,4 +8,16 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="resources\bg_gra.png" />
+    <None Remove="resources\bg_menu.png" />
+    <None Remove="resources\statek.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\bg_gra.png" />
+    <Resource Include="resources\bg_menu.png" />
+    <Resource Include="resources\statek.png" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,20 @@
+﻿<Page x:Class="SpaceInvaders.strony.planszaGry"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SpaceInvaders.strony"
+      mc:Ignorable="d" 
+      d:DesignHeight="541" d:DesignWidth="866"
+      Title="planszaGry"
+      Focusable="True"
+      Loaded="Page_Loaded">
+
+    <Viewbox>
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="541" VerticalAlignment="Top" Width="866" Source="/resources/bg_gra.png"/>
+        <Image x:Name="statek" HorizontalAlignment="Left" Height="71" Margin="398,460,0,0" VerticalAlignment="Top" Width="73" Source="/resources/statek.png"/>
+
+    </Grid>
+    </Viewbox>
+</Page>
