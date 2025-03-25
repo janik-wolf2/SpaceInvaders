@@ -4,17 +4,15 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SpaceInvaders.strony"
-      mc:Ignorable="d" 
-      d:DesignHeight="541" d:DesignWidth="866"
+      mc:Ignorable="d"
       Title="planszaGry"
       Focusable="True"
-      Loaded="Page_Loaded">
+      Loaded="Page_Loaded" Height="539" Width="868">
 
-    <Viewbox>
-    <Grid>
-        <Image HorizontalAlignment="Left" Height="541" VerticalAlignment="Top" Width="866" Source="/resources/bg_gra.png"/>
-        <Image x:Name="statek" HorizontalAlignment="Left" Height="71" Margin="398,460,0,0" VerticalAlignment="Top" Width="73" Source="/resources/statek.png"/>
+    <Canvas x:Name="planszaCanvas" Margin="0,0,31,0" Focusable="True">
+        <Image HorizontalAlignment="Left" Height="541" VerticalAlignment="Center" Width="869" Source="/resources/bg_gra.png"/>
+        <Image x:Name="statek" HorizontalAlignment="Left" Height="71" Canvas.Left="398" Source="/resources/statek.png" Canvas.Top="460"/>
+        <TextBox Canvas.Left="10" TextWrapping="Wrap" Text="Liczba żyć:: ❤️ ❤️ ❤️ ❤️ ❤️" Canvas.Top="10" Width="258" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Impact" FontSize="20" IsEnabled="False"/>
 
-    </Grid>
-    </Viewbox>
+    </Canvas>
 </Page>

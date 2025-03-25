@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpaceInvaders"
         mc:Ignorable="d"
-        Title="MainWindow"  Width="820" Height="541"
+        Title="MainWindow"  Width="866" Height="582"
         KeyDown="Window_KeyDown">
     <Grid>
         <Frame x:Name="glownyFrame" NavigationUIVisibility="Hidden">

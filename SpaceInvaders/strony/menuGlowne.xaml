@@ -8,15 +8,32 @@
       d:DesignHeight="541" d:DesignWidth="866"
       Title="menuGlowne">
 
-    <Viewbox>
-        <Grid>
-            <Image HorizontalAlignment="Left" Height="541" VerticalAlignment="Top" Width="866" Source="/resources/bg_menu.png"/>
-            <Label Content="Kosmiczni Najezdzcy" HorizontalAlignment="Left" Margin="88,71,0,0" VerticalAlignment="Top" Height="72" Width="120" FontFamily="Consolas"/>
-            
-            <Button Content="Graj" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" Height="60" Width="118" Click="Button_Click"/>
-            <Button Content="Sterowanie" HorizontalAlignment="Center" Margin="0,348,0,0" VerticalAlignment="Top" Height="60" Width="118"/>
-            <Button Content="Wyjdz" HorizontalAlignment="Center" Margin="0,428,0,0" VerticalAlignment="Top" Height="60" Width="118"/>
+    <Canvas>
+        <Image HorizontalAlignment="Left" Height="541" VerticalAlignment="Top" Width="866" Source="/resources/bg_menu.png"/>
+        <Label Content="Kosmiczni Najezdzcy" HorizontalAlignment="Left" Margin="88,71,0,0" VerticalAlignment="Top" Height="72" Width="120" FontFamily="Consolas"/>
 
-        </Grid>
-    </Viewbox>
+        <Button Content="Graj" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="118" Click="Button_Click" Canvas.Left="374" Canvas.Top="246" FontSize="20" FontFamily="Impact">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Instrukcja" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="118" Canvas.Left="374" Canvas.Top="324" FontSize="20" FontFamily="Impact">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Wyjdź" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="118" Canvas.Left="374" Canvas.Top="404" FontSize="20" FontFamily="Impact">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label Content="Space Intruder" Canvas.Left="223" Canvas.Top="107" FontSize="50" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Stencil"/>
+
+    </Canvas>
 </Page>
