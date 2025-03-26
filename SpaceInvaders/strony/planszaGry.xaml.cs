@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -23,7 +24,7 @@ namespace SpaceInvaders.strony
     public partial class planszaGry : Page
     {
         DispatcherTimer timer = new DispatcherTimer();
-        int bulletTimer = 0;
+        double bulletTimer = 0;
         int liczbaZyc = 3;
         bool goLeft = false;
         bool goRight = false;
@@ -47,14 +48,27 @@ namespace SpaceInvaders.strony
             {
                 if(x is Rectangle && (string)x.Tag == "pocisk")
                 {
-                    Canvas.SetTop(x, Canvas.GetTop(x) - 20);
+                    Canvas.SetTop(x, Canvas.GetTop(x) - 10);
                 }
             }
 
 
+            foreach (var x in planszaCanvas.Children.OfType<Rectangle>())
+            {
+                if (x is Rectangle && (string)x.Tag == "pociskPrzeciwnika")
+                {
+                    Canvas.SetTop(x, Canvas.GetTop(x) + 5);
+                }
+            }
 
+            bulletTimer -= 0.5;
 
-            
+            if(bulletTimer < 0)
+            {
+                pociskPrzeciwnika(Canvas.GetLeft(statek) + 20, 10);
+
+                bulletTimer = 90;
+            }
         }
 
         
@@ -64,6 +78,22 @@ namespace SpaceInvaders.strony
             this.Focusable = true;
             this.Focus();
             Keyboard.Focus(this);
+        }
+
+        public void pociskPrzeciwnika(double x, double y)
+        {
+            Rectangle pociskPrzeciwnika = new Rectangle
+            {
+                Tag = "pociskPrzeciwnika",
+                Width = 5,
+                Height = 25,
+                Fill = Brushes.Yellow
+            };
+
+            Canvas.SetTop(pociskPrzeciwnika, y);
+            Canvas.SetLeft(pociskPrzeciwnika, x);
+
+            planszaCanvas.Children.Add(pociskPrzeciwnika);
         }
 
 
@@ -103,9 +133,26 @@ namespace SpaceInvaders.strony
                 planszaCanvas.Children.Add(pociskGracza);
             }
 
+            if(e.Key == Key.Escape)
+            {
+                pauzaGrid.Visibility = Visibility.Visible;
+                timer.Stop();
+            }
+
             goRight = false;
             goLeft = false;
 
+
+        }
+
+        private void grajDalej(object sender, RoutedEventArgs e)
+        {
+            pauzaGrid.Visibility = Visibility.Collapsed;
+            timer.Start();
+        }
+
+        private void wyjdzDoMenu(object sender, RoutedEventArgs e)
+        {
 
         }
     }

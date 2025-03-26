@@ -9,10 +9,19 @@
       Focusable="True"
       Loaded="Page_Loaded" Height="539" Width="868">
 
-    <Canvas x:Name="planszaCanvas" Margin="0,0,31,0" Focusable="True">
+    <Canvas x:Name="planszaCanvas" Focusable="True">
         <Image HorizontalAlignment="Left" Height="541" VerticalAlignment="Center" Width="869" Source="/resources/bg_gra.png"/>
         <Image x:Name="statek" HorizontalAlignment="Left" Height="71" Canvas.Left="398" Source="/resources/statek.png" Canvas.Top="460"/>
         <TextBox Canvas.Left="10" TextWrapping="Wrap" Text="Liczba żyć:: ❤️ ❤️ ❤️ ❤️ ❤️" Canvas.Top="10" Width="258" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Impact" FontSize="20" IsEnabled="False"/>
 
+        <Grid x:Name="pauzaGrid" Height="539" Width="868" Visibility="Collapsed">
+            <Button Content="Graj dalej" HorizontalAlignment="Center" Margin="0,218,0,0" VerticalAlignment="Top" Height="52" Width="135" Click="grajDalej"/>
+            <Button Content="Wyjdz do menu" HorizontalAlignment="Center" Margin="0,307,0,0" VerticalAlignment="Top" Height="52" Width="136" Click="wyjdzDoMenu"/>
+            <Label Content="Pauza" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" FontSize="36"/>
+
+
+        </Grid>
     </Canvas>
+
+
 </Page>
