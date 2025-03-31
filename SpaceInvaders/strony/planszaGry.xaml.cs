@@ -103,15 +103,11 @@ namespace SpaceInvaders.strony
 
             if (e.Key == Key.Left && Canvas.GetLeft(statek) >= 0)
             {
-
-                //statek.Margin = new Thickness(currentMargin.Left + 20, currentMargin.Top, currentMargin.Right, currentMargin.Bottom);
                 Canvas.SetLeft(statek, Canvas.GetLeft(statek) - 20);
             }
 
             if (e.Key == Key.Right && Canvas.GetLeft(statek) < 770)
             {
-
-                //statek.Margin = new Thickness(currentMargin.Left + 20, currentMargin.Top, currentMargin.Right, currentMargin.Bottom);
                 Canvas.SetLeft(statek, Canvas.GetLeft(statek) + 20);
             }
 

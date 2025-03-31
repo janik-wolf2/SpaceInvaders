@@ -9,17 +9,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\alien1.png" />
+    <None Remove="resources\alien2.png" />
+    <None Remove="resources\alien3.png" />
+    <None Remove="resources\alien4.png" />
     <None Remove="resources\bg_gra.png" />
     <None Remove="resources\bg_menu.png" />
     <None Remove="resources\bg_pauza.png" />
+    <None Remove="resources\shield.png" />
+    <None Remove="resources\spacja.png" />
     <None Remove="resources\statek.png" />
+    <None Remove="resources\strzalki.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="resources\alien1.png" />
+    <Resource Include="resources\alien2.png" />
+    <Resource Include="resources\alien3.png" />
+    <Resource Include="resources\alien4.png" />
     <Resource Include="resources\bg_gra.png" />
     <Resource Include="resources\bg_menu.png" />
     <Resource Include="resources\bg_pauza.png" />
+    <Resource Include="resources\shield.png" />
+    <Resource Include="resources\spacja.png" />
     <Resource Include="resources\statek.png" />
+    <Resource Include="resources\strzalki.png" />
   </ItemGroup>
 
 </Project>

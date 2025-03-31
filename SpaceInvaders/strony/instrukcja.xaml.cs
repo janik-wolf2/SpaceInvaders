@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceInvaders.strony;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,26 +14,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SpaceInvaders.strony
+namespace SpaceInvaders
 {
     /// <summary>
-    /// Logika interakcji dla klasy menuGlowne.xaml
+    /// Logika interakcji dla klasy Instrukcja.xaml
     /// </summary>
-    public partial class menuGlowne : Page
+    public partial class Instrukcja : Page
     {
-        public menuGlowne()
+        public Instrukcja()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new planszaGry());
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Instrukcja());
+            NavigationService.Navigate(new menuGlowne());
         }
     }
 }

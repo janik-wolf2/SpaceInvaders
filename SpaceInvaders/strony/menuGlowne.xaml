@@ -19,7 +19,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Instrukcja" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="118" Canvas.Left="374" Canvas.Top="324" FontSize="20" FontFamily="Impact">
+        <Button Content="Instrukcja" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="118" Canvas.Left="374" Canvas.Top="324" FontSize="20" FontFamily="Impact" Click="Button_Click_1">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="30"/>
