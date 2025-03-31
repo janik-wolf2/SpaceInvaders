@@ -1,0 +1,38 @@
+﻿<Page x:Class="SpaceInvaders.Instrukcja"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SpaceInvaders"
+      mc:Ignorable="d" 
+      d:DesignHeight="541" d:DesignWidth="866"
+      Title="Instrukcja">
+
+    <Grid>
+        <Image HorizontalAlignment="Left" 
+               VerticalAlignment="Center" Width="950" Source="/resources/bg_menu.png" Height="540"/>
+        <Label Content="INSTRUKCJA
+" FontSize="50" Foreground="White" FontFamily="Stencil" Margin="0,28,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Image HorizontalAlignment="Left" Height="78" Margin="10,105,0,0" VerticalAlignment="Top" Width="78" Source="/resources/strzalki.png"/>
+        <Button Content="Cofnij" FontSize="20" FontFamily="Impact" Margin="10,10,758,478" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        
+        
+        <Image HorizontalAlignment="Left" Height="65" Margin="14,178,0,0" VerticalAlignment="Top" Width="87" Source="/resources/spacja.png" RenderTransformOrigin="0.391,0.423"/>
+        <TextBox HorizontalAlignment="Left" Margin="92,342,0,0" TextWrapping="Wrap" Text="ciąg dalszy o wrogach, punktach, boostach itp" VerticalAlignment="Top" Width="726" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Impact" FontSize="36" Height="50" IsEnabled="False"/>
+        <Label Content="Poruszaj statkiem w lewo lub prawo używając strzałki na klawiaturze" HorizontalAlignment="Center" Margin="0,122,0,0" VerticalAlignment="Top" FontFamily="Impact" FontSize="24" Foreground="White"/>
+        <Label Content="Kliknij bądź przytrzymaj klawisz spacji by strzelać pojedynczo lub ciągiem" HorizontalAlignment="Left" Margin="94,191,0,0" VerticalAlignment="Top" FontFamily="Impact" FontSize="24" Foreground="White"/>
+    </Grid>
+</Page>
