@@ -31,6 +31,9 @@
         <Image HorizontalAlignment="Left" Height="65" Margin="14,178,0,0" VerticalAlignment="Top" Width="87" Source="/resources/spacja.png" RenderTransformOrigin="0.391,0.423"/>
         <TextBox HorizontalAlignment="Left" Margin="92,342,0,0" TextWrapping="Wrap" Text="ciąg dalszy o wrogach, punktach, boostach itp" VerticalAlignment="Top" Width="726" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Impact" FontSize="36" Height="50" IsEnabled="False"/>
         <Label Content="Poruszaj statkiem w lewo lub prawo używając strzałki na klawiaturze" HorizontalAlignment="Center" Margin="0,122,0,0" VerticalAlignment="Top" FontFamily="Impact" FontSize="24" Foreground="White"/>
+       
+        
+        
         <Label Content="Kliknij bądź przytrzymaj klawisz spacji by strzelać pojedynczo lub ciągiem" HorizontalAlignment="Left" Margin="94,191,0,0" VerticalAlignment="Top" FontFamily="Impact" FontSize="24" Foreground="White"/>
     </Grid>
 </Page>
